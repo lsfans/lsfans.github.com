@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>洛师范儿快速导航</title>
+
+    <!-- Bootstrap -->
+<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+
+
+
+  </head>
+  
+  
+  <body>
+    
+ <div class="jumbotron">
+  <h1>洛师范儿<span class="glyphicon glyphicon-heart"></span>快速导航</h1>
+  <p>为了方便大家的使用，我们特地搭建了这一响应式快速导航页面，无论你的屏幕是什么尺寸，都能获得非常良好的体验效果。</p>
+  <p><a class="btn btn-primary btn-lg" role="button" href="index.html"><span class="glyphicon glyphicon-repeat"></span>返回首页</a></p>
+</div>
+ 
+
+
+<div align="center" > 
+<p>    
+<button onclick="weixinShareTimeline(title,desc,link,imgUrl)">分享到朋友圈</button>
+
+<script>
+function weixinShareTimeline(title,desc,link,imgUrl){
+WeixinJSBridge.invoke(‘shareTimeline’,{
+“img_url”:"/img/tuisong.jpg",
+//”img_width”:”640″,
+//”img_height”:”640″,
+“link”:"lsfans.github.io/2.html",
+“desc”: 洛师最走心的自媒体__公众号:洛师范儿,
+“title”:快速导航：查快递，查课表，查成绩
+});
+}
+</script>
+
+
+<button onclick="weixinSendAppMessage(title,desc,link,imgUrl)">发送给好友</button>
+
+<script>
+function weixinSendAppMessage(title,desc,link,imgUrl){
+	WeixinJSBridge.invoke('sendAppMessage',{
+	//"appid":appId,
+	"img_url":"/img/tuisong.jpg",
+	//"img_width":"640",
+	//"img_height":"640",
+	"link":"lsfans.github.io/2.html",
+	“desc”: 洛师最走心的自媒体__公众号:洛师范儿,
+    “title”:快速导航：查快递，查课表，查成
+	});
+}
+</script>
+
+<button onclick="weixinAddContact(name)">关注我们</button>
+
+<script>
+function weixinAddContact(name){
+	WeixinJSBridge.invoke("addContact", {webtype: "1",username: LsFans}, function(e) {
+		WeixinJSBridge.log(e.err_msg);
+		//e.err_msg:add_contact:added 已经添加
+		//e.err_msg:add_contact:cancel 取消添加
+		//e.err_msg:add_contact:ok 添加成功
+		if(e.err_msg == 'add_contact:added' || e.err_msg == 'add_contact:ok'){
+		    //关注成功，或者已经关注过
+		}
+	})
+}
+</script>
+
+
+
+
+
+</p> 
+ 
+ 
+ 
+ 
+
+     
+
+
+<p>
+
+        <button type="button" class="btn btn-success"><a href="#tongzhi" >通知公告<span class="glyphicon glyphicon-chevron-down"></span></button>
+        <button type="button" class="btn btn-info"><a href="#xiazai" >公共下载<span class="glyphicon glyphicon-chevron-down"></span></button>
+        <button type="button" class="btn btn-warning"><a href="#kuaidi" >快递查询<span class="glyphicon glyphicon-chevron-down"></span></button>
+        <button type="button" class="btn btn-danger"><a href="http://211.67.81.72/jwweb/_data/home_login.aspx">点击登录教务系统<span class="glyphicon glyphicon-hand-up"></span></button>
+
+      </p>    
+    
+</div>  
+    <!-- 添加公告 -->   
+<a name="tongzhi"></a>     
+<div class="embed-responsive embed-responsive-4by3">
+  <iframe class="embed-responsive-item" src="http://211.67.81.72/jwweb/_data/index_newsall.aspx"></iframe>
+</div>  
+
+  
+<a name="xiazai"></a>
+<div class="embed-responsive embed-responsive-4by3">
+  <iframe class="embed-responsive-item" src="http://211.67.81.72/jwweb/_data/index_downall.aspx"></iframe>
+</div> 
+
+
+<a name="kuaidi"></a>
+<div class="embed-responsive embed-responsive-4by3">
+  <iframe class="embed-responsive-item" src="http://www.kuaidi100.com/frame/app/index2.html"></iframe>
+</div> 
+    
+    
+<p align="center">2014洛师范儿LsFans© All rights reserved. Powered by Jack Cao.
+ </p>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
