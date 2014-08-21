@@ -26,82 +26,27 @@
     
  <div class="jumbotron">
   <h1>洛师范儿<span class="glyphicon glyphicon-heart"></span>快速导航</h1>
-  <p>为了方便大家的使用，我们特地搭建了这一响应式快速导航页面，无论你的屏幕是什么尺寸，都能获得非常良好的体验效果。</p>
+  <h3>为了方便大家的使用，我们特地搭建了这一响应式快速导航页面，无论你的屏幕是什么尺寸，都能获得非常良好的体验效果。我们会继续带给大家新的功能。
+</h3>
+<p>如果您觉得不错请关注或者分享我们的微信公众号：洛师范儿</p>
   <p><a class="btn btn-primary btn-lg" role="button" href="index.html"><span class="glyphicon glyphicon-repeat"></span>返回首页</a></p>
 </div>
  
 
 
 <div align="center" > 
-<p>    
-<button onclick="weixinShareTimeline(title,desc,link,imgUrl)">分享到朋友圈</button>
 
-<script>
-function weixinShareTimeline(title,desc,link,imgUrl){
-WeixinJSBridge.invoke(‘shareTimeline’,{
-“img_url”:"/img/tuisong.jpg",
-//”img_width”:”640″,
-//”img_height”:”640″,
-“link”:"lsfans.github.io/2.html",
-“desc”: 洛师最走心的自媒体__公众号:洛师范儿,
-“title”:快速导航：查快递，查课表，查成绩
-});
-}
-</script>
-
-
-<button onclick="weixinSendAppMessage(title,desc,link,imgUrl)">发送给好友</button>
-
-<script>
-function weixinSendAppMessage(title,desc,link,imgUrl){
-	WeixinJSBridge.invoke('sendAppMessage',{
-	//"appid":appId,
-	"img_url":"/img/tuisong.jpg",
-	//"img_width":"640",
-	//"img_height":"640",
-	"link":"lsfans.github.io/2.html",
-	“desc”: 洛师最走心的自媒体__公众号:洛师范儿,
-    “title”:快速导航：查快递，查课表，查成
-	});
-}
-</script>
-
-<button onclick="weixinAddContact(name)">关注我们</button>
-
-<script>
-function weixinAddContact(name){
-	WeixinJSBridge.invoke("addContact", {webtype: "1",username: LsFans}, function(e) {
-		WeixinJSBridge.log(e.err_msg);
-		//e.err_msg:add_contact:added 已经添加
-		//e.err_msg:add_contact:cancel 取消添加
-		//e.err_msg:add_contact:ok 添加成功
-		if(e.err_msg == 'add_contact:added' || e.err_msg == 'add_contact:ok'){
-		    //关注成功，或者已经关注过
-		}
-	})
-}
-</script>
-
-
-
-
-
-</p> 
  
- 
- 
- 
-
-     
-
 
 <p>
 
-        <button type="button" class="btn btn-success"><a href="#tongzhi" >通知公告<span class="glyphicon glyphicon-chevron-down"></span></button>
-        <button type="button" class="btn btn-info"><a href="#xiazai" >公共下载<span class="glyphicon glyphicon-chevron-down"></span></button>
-        <button type="button" class="btn btn-warning"><a href="#kuaidi" >快递查询<span class="glyphicon glyphicon-chevron-down"></span></button>
-        <button type="button" class="btn btn-danger"><a href="http://211.67.81.72/jwweb/_data/home_login.aspx">点击登录教务系统<span class="glyphicon glyphicon-hand-up"></span></button>
+        <button type="button" class="btn btn-default"><a href="#tongzhi" >通知公告<span class="glyphicon glyphicon-chevron-down"></span></button>
+        <button type="button" class="btn btn-default"><a href="#xiazai" >公共下载<span class="glyphicon glyphicon-chevron-down"></span></button>
+        <button type="button" class="btn btn-default"><a href="#kuaidi" >快递查询<span class="glyphicon glyphicon-chevron-down"></span></button>
+        <button type="button" class="btn btn-default"><a href="http://211.67.81.72/jwweb/_data/home_login.aspx">点击登录教务系统<span class="glyphicon glyphicon-hand-up"></span></button>
+        <button type="button" class="btn btn-default"><a href="http://www.chsi.com.cn/cet/">英语四六成绩查询<span class="glyphicon glyphicon-search"></span></button>
 
+   
       </p>    
     
 </div>  
