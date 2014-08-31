@@ -164,7 +164,7 @@ IS_TOUCH, SCREEN_SHOW_ALL = !0; (function(a, d) {
 			e.on("click",
 			function(a) {
 				a.stopImmediatePropagation();
-				IS_TOUCH && a.nativeEvent instanceof MouseEvent || window.open("lsfans.github.io/2.html")
+				IS_TOUCH && a.nativeEvent instanceof MouseEvent || window.open(APP_FOLLOW_URL)
 			});
 			e.name = "moreGames"
 		} else a.stage.removeChild(e);
